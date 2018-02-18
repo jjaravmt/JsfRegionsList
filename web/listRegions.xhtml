@@ -16,6 +16,18 @@
             <f:facet name="header">Region Name</f:facet>
             #{region.name}
         </h:column>
+        <h:column>
+            <f:facet name="header">Actions</f:facet>
+            <h:form>
+                <h:commandButton value="Edit" action="#{regionsBean.editRegion(region)}"/>
+                <h:commandButton value="Delete" action="#{regionsBean.deleteRegion(region)}"/>
+            </h:form>
+        </h:column>
     </h:dataTable>
+    <h:form>
+        <h:commandButton value="New" action="#{regionsBean.newRegion}"/>
+    </h:form>
+
+
 </f:view>
 </html>

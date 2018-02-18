@@ -5,11 +5,12 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-   <f:view>
-      <h:form>
-         <h:commandButton value="List Region" action="listRegions"/>
-
-      </h:form>
-
-   </f:view>
+<f:view>
+    <h:outputLabel value="Hello, world"/>
+    <h:form>
+        <h:outputLabel value="Region Name" for="name"/>
+        <h:inputText id="name" value="#{regionsBean.name}"/>
+        <h:commandButton value="Create" action="#{regionsBean.createRegion}"/>
+    </h:form>
+</f:view>
 </html>
