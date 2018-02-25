@@ -16,7 +16,7 @@ public class HrService {
         if (connection==null){
             //Metodo de clase, para que realiza la busqueda del datasource
             try {
-                connection = ((DataSource)InitialContext.doLookup("jdbc/MySQLDataSource"))
+                connection = ((DataSource)InitialContext.doLookup("jdbc/MYSQLDataSource"))
                         .getConnection();
             } catch (SQLException | NamingException e) {
                 e.printStackTrace();
